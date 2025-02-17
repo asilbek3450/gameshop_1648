@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- testimonial section start -->
+<div class="testimonial_section layout_padding">
+  <div class="container">
+    <h1 class="testimonial_text">Mijozlar Fikri</h1>
+    <p class="ipsum_text">
+      🎮 Bizning o‘yinlarimizdan foydalangan mijozlarimizning fikrlari bilan tanishing!  
+    </p>
+    <div class="testimonial_section_2">
+      {% for testimonial in testimonials %}
+      <div class="box_main">
+        <div class="quote_icon"><img src="{% static 'images/quote-icon.png' %}"></div>
+        <p class="dolor_text">{{ testimonial.comment }}</p>
+        <div class="client_main">
+          <div class="client_left">
+            <div class="images_5">
+              <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
+            </div>
+          </div>
+          <div class="client_right">
+            <h1 class="sandy_text">{{ testimonial.name }}</h1>
+            <p class="sandy_text_1">{{ testimonial.position }}</p>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <p>Hozircha mijozlar fikri mavjud emas.</p>
+      {% endfor %}
+    </div>
+    <div class="see_main">
+      <div class="see_bt"><a href="#">Barchasini Ko‘rish</a></div>
+    </div>
+  </div>
+</div>
+<!-- testimonial section end -->
+
+{% endblock %}

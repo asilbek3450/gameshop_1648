@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- product section start -->
+<div class="product_section layout_padding">
+  <div class="container">
+    <div class="product_text">Bizning <span style="color: #5ca0e9;">o‘yinlarimiz</span></div>
+    <p class="long_text">
+      🎮 Eng so‘nggi va mashhur o‘yinlarni bizning do‘kondan toping! Har xil janrdagi o‘yinlar sizni kutmoqda.  
+    </p>
+    <div class="product_section_2">
+      <div class="row">
+        {% for game in abduqahhor %}
+        <div class="col-md-6">
+          <div class="image_2"><img src="{{ game.image.url }}" alt="{{ game.title }}" style="height: 300px;"></div>
+          <div class="price_text">Narxi: $ <span style="color: #3a3a38;">{{ game.price }}</span></div>
+          <h1 class="game_text">{{ game.title }}</h1>
+          <p class="long_text">{{ game.description|truncatechars:20 }}</p>
+        </div>
+        {% empty %}
+        <p>Hozircha hech qanday o‘yin mavjud emas.</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="see_main">
+      <div class="see_bt"><a href="#">Barchasini ko‘rish</a></div>
+    </div>
+  </div>
+</div>
+<!-- product section end -->
+
+{% endblock content %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+
+<!-- about section start -->
+<div class="about_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="image_2"><img src="{% static 'images/img-2.png' %}"></div>
+      </div>
+      <div class="col-md-6">
+        <h1 class="about_text">BIZ HAQIMIZDA</h1>
+        <p class="lorem_text">
+          🎮 <strong>GameShop</strong> – bu o‘yin ixlosmandlari uchun eng zo‘r joy! Biz turli janrdagi o‘yinlarni taklif qilamiz: aksion, sarguzasht, strategiya, sport va boshqalar. 
+          Platformamizda siz nafaqat eng so‘nggi va mashhur o‘yinlarni topasiz, balki eski, klassik o‘yinlarni ham xarid qilishingiz mumkin.  
+        </p>
+        <p class="lorem_text">
+          🕹️ Bizning maqsadimiz – o‘yin ixlosmandlariga eng yaxshi tajribani taqdim etish. GameShop’da siz:
+          <ul>
+            <li>🔥 Eng so‘nggi o‘yinlarni arzon narxlarda sotib olishingiz</li>
+            <li>💡 O‘yin sharhlari va tavsiyalarni o‘qishingiz</li>
+            <li>💻 Raqamli o‘yin kodlarini tez va oson xarid qilishingiz</li>
+            <li>🌎 Dunyo bo‘ylab eng mashhur o‘yinlarni bir joyda topishingiz</li>
+          </ul>
+        </p>
+        <p class="lorem_text">
+          🎯 Agar siz o‘yin dunyosiga sho‘ng‘ishni va eng yaxshi o‘yin tajribasidan bahramand bo‘lishni istasangiz, GameShop siz uchun mukammal tanlov!  
+        </p>
+        <div class="shop_bt_2"><a href="#">Hozir xarid qiling</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- about section end -->
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O'yin Konsollari</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+  <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+</head>
+<body>
+
+  <!-- header bo'limi -->
+  <div class="header_section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="logo"><a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}"></a></div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">BOSH SAHIFA</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">BIZ HAQIMIZDA</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">MAHSULOTLAR</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'video' %}">VIDEO O'YINLAR</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'remote' %}">MASOFDAN BOSHQARISH</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">ALOQA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><img src="{% static 'images/search-icon.png' %}"></a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">KIRISH</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">RO'YXATDAN O'TISH</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- header bo'limi tugadi -->
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- footer bo'limi -->
+  <div class="section_footer">
+    <div class="container">
+      <div class="footer_section_2">
+        <div class="row">
+          <div class="col-md-3">
+            <h2 class="account_text">Biz Haqimizda</h2>
+            <p class="ipsum_text_2">Bizning kompaniya eng sifatli o‘yin konsollari va aksessuarlarini taqdim etadi.</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="account_text">Foydali Havolalar</h2>
+            <ul class="useful_link">
+              <li><a href="{% url 'video' %}">Video o‘yinlar</a></li>
+              <li><a href="{% url 'remote' %}">Masofadan boshqarish</a></li>
+              <li><a href="#">3D controller</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h2 class="account_text">Biz bilan bog‘laning</h2>
+            <p class="ipsum_text_2">Savollaringiz bo‘lsa, biz bilan bog‘laning!</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="account_text">Yangiliklarga obuna bo‘ling</h2>
+            <input type="email" class="email_text" placeholder="Emailingizni kiriting" name="email">
+            <button class="subscribr_bt">OBUNA BO‘LISH</button>
+          </div>
+        </div>
+      </div>
+      <div class="social_icon">
+        <ul>
+          <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
+          <li><a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
+          <li><a href="#"><img src="{% static 'images/linkdin-icon.png' %}"></a></li>
+          <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- footer bo'limi tugadi -->
+
+  <!-- copyright bo'limi -->
+  <div class="copyright_section">
+    <div class="container">
+      <p class="copyright_text">Mualliflik huquqi &copy; 2025. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </div>
+  <!-- copyright bo'limi tugadi -->
+
+  <!-- JavaScript fayllar -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+  <script src="{% static 'js/plugin.js' %}"></script>
+  <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+</html>
